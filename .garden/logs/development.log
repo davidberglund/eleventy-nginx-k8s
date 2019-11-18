@@ -1,0 +1,217 @@
+
+[2019-11-17T23:12:44.771Z] Getting status...
+
+[2019-11-17T23:12:46.397Z] Preparing environment...
+
+[2019-11-17T23:12:46.398Z] Configuring...
+
+[2019-11-17T23:12:46.469Z] Installing to eleventy-project...
+
+[2019-11-17T23:12:46.470Z] Applying Tiller RBAC resources...
+
+[2019-11-17T23:12:46.945Z] Waiting for resources to be ready...
+
+[2019-11-17T23:12:48.970Z] Resources ready
+
+[2019-11-17T23:12:49.016Z] Deploying Tiller...
+
+[2019-11-17T23:12:50.462Z] Waiting for resources to be ready...
+
+[2019-11-17T23:12:52.506Z] Deployment/tiller-deploy: Started container tiller
+
+[2019-11-17T23:12:55.026Z] Resources ready
+
+[2019-11-17T23:12:55.027Z] Deploying Tiller... → Done (took 8.6 sec)
+
+[2019-11-17T23:12:55.030Z] Configuring... → Ready
+
+[2019-11-17T23:12:55.039Z] Preparing environment... → Done
+
+[2019-11-17T23:12:55.765Z] Error: Unknown config kind StaticWebsite in eleventy-sample/garden.yml
+    at prepareFlatConfigDoc (/snapshot/dist/build/src/config/base.js:0)
+    at prepareResources (/snapshot/dist/build/src/config/base.js:0)
+    at lodash_1.flatten.rawSpecs.map (/snapshot/dist/build/src/config/base.js:0)
+    at Array.map (<anonymous>)
+    at Object.<anonymous> (/snapshot/dist/build/src/config/base.js:0)
+    at Generator.next (<anonymous>)
+    at fulfilled (/snapshot/dist/build/src/config/base.js:0)
+Error Details:
+kind: StaticWebsite
+path: eleventy-sample/garden.yml
+
+
+[2019-11-17T23:12:55.767Z] 
+See error.log for detailed error message
+
+[2019-11-17T23:14:20.830Z] Getting status...
+
+[2019-11-17T23:14:22.546Z] Getting status... → Done
+
+[2019-11-17T23:14:23.217Z] Error: Unrecognized module type '' (defined at eleventy-sample/garden.yml). Are you missing a provider configuration?
+    at Garden.<anonymous> (/snapshot/dist/build/src/garden.js:0)
+    at Generator.next (<anonymous>)
+    at fulfilled (/snapshot/dist/build/src/garden.js:0)
+Error Details:
+config:
+  apiVersion: garden.io/v0
+  kind: Module
+  build:
+    dependencies: []
+  configPath: /home/daber44/dev/david/eleventy-project/eleventy-sample/garden.yml
+  name: my-website
+  outputs: {}
+  path: /home/daber44/dev/david/eleventy-project/eleventy-sample
+  serviceConfigs: []
+  spec:
+    environments:
+      - name: local
+    providers:
+      - name: local-kubernetes
+        environments:
+          - local
+    build:
+      dependencies: []
+  testConfigs: []
+  taskConfigs: []
+configuredModuleTypes:
+  - exec
+  - container
+  - helm
+  - kubernetes
+
+
+[2019-11-17T23:14:23.218Z] 
+See error.log for detailed error message
+
+[2019-11-17T23:18:42.357Z] Getting status...
+
+[2019-11-17T23:18:44.032Z] Getting status... → Done
+
+[2019-11-17T23:18:45.369Z] Preparing build (13303 files)...
+
+[2019-11-17T23:18:47.636Z] Getting build status for v-2b566fd9a3...
+
+[2019-11-17T23:18:47.763Z] Building version v-2b566fd9a3...
+
+[2019-11-17T23:18:47.767Z] Building eleventy:v-2b566fd9a3...
+
+[2019-11-17T23:19:06.400Z] Building eleventy:v-2b566fd9a3... → Done (took 21 sec)
+
+[2019-11-17T23:19:06.409Z] Deploying version v-2b566fd9a3...
+
+[2019-11-17T23:19:08.714Z] Waiting for resources to be ready...
+
+[2019-11-17T23:19:10.779Z] Deployment/eleventy-v-2b566fd9a3: Readiness probe failed: Get http://172.17.0.11:8080/: dial tcp 172.17.0.11:8080: connect: connection refused
+
+[2019-11-17T23:24:04.718Z] Getting status...
+
+[2019-11-17T23:24:06.420Z] Getting status... → Done
+
+[2019-11-17T23:24:08.125Z] Preparing build (13303 files)...
+
+[2019-11-17T23:24:09.503Z] Getting build status for v-0442b114ad...
+
+[2019-11-17T23:24:09.633Z] Building version v-0442b114ad...
+
+[2019-11-17T23:24:09.636Z] Building eleventy:v-0442b114ad...
+
+[2019-11-17T23:24:13.897Z] Building eleventy:v-0442b114ad... → Done (took 5.8 sec)
+
+[2019-11-17T23:24:13.906Z] Deploying version v-0442b114ad...
+
+[2019-11-17T23:24:16.409Z] Waiting for resources to be ready...
+
+[2019-11-17T23:24:18.442Z] Resources ready
+
+[2019-11-17T23:24:18.481Z] Deploying version v-0442b114ad... → Done (took 4.6 sec)
+
+[2019-11-17T23:24:18.484Z] → Ingress: http://eleventy-project.192.168.99.100.nip.io
+
+[2019-11-17T23:24:18.496Z] Done! 
+
+[2019-11-17T23:24:44.953Z] Getting status...
+
+[2019-11-17T23:24:46.695Z] Getting status... → Done
+
+[2019-11-17T23:24:47.724Z] modules:
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /home/daber44/dev/david/eleventy-project/eleventy-sample/garden.yml
+    description: Eleventy service container
+    kind: Module
+    name: eleventy
+    outputs:
+      deployment-image-name: eleventy
+      local-image-name: eleventy
+    path: /home/daber44/dev/david/eleventy-project/eleventy-sample
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: eleventy
+    taskConfigs: []
+    testConfigs: []
+    type: container
+
+
+[2019-11-17T23:25:27.945Z] Getting status...
+
+[2019-11-17T23:25:29.461Z] Getting status... → Done
+
+[2019-11-18T10:11:51.670Z] Getting status...
+
+[2019-11-18T10:11:53.059Z] Getting status... → Done
+
+[2019-11-18T10:11:54.265Z] Preparing build (13303 files)...
+
+[2019-11-18T10:11:55.314Z] Getting build status for v-0442b114ad...
+
+[2019-11-18T10:11:55.536Z] Getting build status for v-0442b114ad... → Done (took 1.3 sec)
+
+[2019-11-18T10:11:56.163Z] Deploying version v-0442b114ad...
+
+[2019-11-18T10:11:56.164Z] Deploying version v-0442b114ad... → Version v-0442b114ad already deployed
+
+[2019-11-18T10:11:56.166Z] → Ingress: http://eleventy-project.192.168.99.100.nip.io
+
+[2019-11-18T10:12:15.671Z] Call 
+
+[2019-11-18T10:12:15.678Z] Getting status...
+
+[2019-11-18T10:12:17.113Z] Getting status... → Done
+
+[2019-11-18T10:12:18.022Z] Error: Could not find service(s): backend
+    at Object.pickKeys (/snapshot/dist/build/src/util/util.js:0)
+    at ConfigGraph.<anonymous> (/snapshot/dist/build/src/config-graph.js:0)
+    at Generator.next (<anonymous>)
+    at __awaiter (/snapshot/dist/build/src/config-graph.js:0)
+    at new Promise (<anonymous>)
+    at __awaiter (/snapshot/dist/build/src/config-graph.js:0)
+    at ConfigGraph.getServices (/snapshot/dist/build/src/config-graph.js:0)
+    at ConfigGraph.<anonymous> (/snapshot/dist/build/src/config-graph.js:0)
+    at Generator.next (<anonymous>)
+    at __awaiter (/snapshot/dist/build/src/config-graph.js:0)
+    at new Promise (<anonymous>)
+    at __awaiter (/snapshot/dist/build/src/config-graph.js:0)
+    at ConfigGraph.getService (/snapshot/dist/build/src/config-graph.js:0)
+    at CallCommand.<anonymous> (/snapshot/dist/build/src/commands/call.js:0)
+    at Generator.next (<anonymous>)
+    at fulfilled (/snapshot/dist/build/src/commands/call.js:0)
+Error Details:
+missing:
+  - backend
+available:
+  - eleventy
+
+
+[2019-11-18T10:12:18.023Z] 
+See error.log for detailed error message
+
+[2019-11-18T10:13:29.747Z] Getting status...
+
+[2019-11-18T10:13:30.902Z] Getting status... → Done
+
+[2019-11-18T10:16:55.012Z] Getting status...
+
+[2019-11-18T10:16:56.157Z] Getting status... → Done

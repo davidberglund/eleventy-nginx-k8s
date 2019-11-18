@@ -1,0 +1,70 @@
+
+[2019-11-17T23:12:55.765Z] Error: Unknown config kind StaticWebsite in eleventy-sample/garden.yml
+    at prepareFlatConfigDoc (/snapshot/dist/build/src/config/base.js:0)
+    at prepareResources (/snapshot/dist/build/src/config/base.js:0)
+    at lodash_1.flatten.rawSpecs.map (/snapshot/dist/build/src/config/base.js:0)
+    at Array.map (<anonymous>)
+    at Object.<anonymous> (/snapshot/dist/build/src/config/base.js:0)
+    at Generator.next (<anonymous>)
+    at fulfilled (/snapshot/dist/build/src/config/base.js:0)
+Error Details:
+kind: StaticWebsite
+path: eleventy-sample/garden.yml
+
+
+[2019-11-17T23:14:23.217Z] Error: Unrecognized module type '' (defined at eleventy-sample/garden.yml). Are you missing a provider configuration?
+    at Garden.<anonymous> (/snapshot/dist/build/src/garden.js:0)
+    at Generator.next (<anonymous>)
+    at fulfilled (/snapshot/dist/build/src/garden.js:0)
+Error Details:
+config:
+  apiVersion: garden.io/v0
+  kind: Module
+  build:
+    dependencies: []
+  configPath: /home/daber44/dev/david/eleventy-project/eleventy-sample/garden.yml
+  name: my-website
+  outputs: {}
+  path: /home/daber44/dev/david/eleventy-project/eleventy-sample
+  serviceConfigs: []
+  spec:
+    environments:
+      - name: local
+    providers:
+      - name: local-kubernetes
+        environments:
+          - local
+    build:
+      dependencies: []
+  testConfigs: []
+  taskConfigs: []
+configuredModuleTypes:
+  - exec
+  - container
+  - helm
+  - kubernetes
+
+
+[2019-11-18T10:12:18.022Z] Error: Could not find service(s): backend
+    at Object.pickKeys (/snapshot/dist/build/src/util/util.js:0)
+    at ConfigGraph.<anonymous> (/snapshot/dist/build/src/config-graph.js:0)
+    at Generator.next (<anonymous>)
+    at __awaiter (/snapshot/dist/build/src/config-graph.js:0)
+    at new Promise (<anonymous>)
+    at __awaiter (/snapshot/dist/build/src/config-graph.js:0)
+    at ConfigGraph.getServices (/snapshot/dist/build/src/config-graph.js:0)
+    at ConfigGraph.<anonymous> (/snapshot/dist/build/src/config-graph.js:0)
+    at Generator.next (<anonymous>)
+    at __awaiter (/snapshot/dist/build/src/config-graph.js:0)
+    at new Promise (<anonymous>)
+    at __awaiter (/snapshot/dist/build/src/config-graph.js:0)
+    at ConfigGraph.getService (/snapshot/dist/build/src/config-graph.js:0)
+    at CallCommand.<anonymous> (/snapshot/dist/build/src/commands/call.js:0)
+    at Generator.next (<anonymous>)
+    at fulfilled (/snapshot/dist/build/src/commands/call.js:0)
+Error Details:
+missing:
+  - backend
+available:
+  - eleventy
+
